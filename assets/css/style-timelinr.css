@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'CircularStd';
+    src: url('../fonts/circular-std-medium-500.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+:root {
+    --pink_b: #cc4d59;
+    --white: #fff;
+    --black: #000;
+    --gold: #877b4d;
+}
+body {
+    font-family: 'CircularStd','sans-serif';
+    background-color: var(--black);
+}
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--gold);
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'CircularStd','sans-serif';
+}
+.container{
+    overflow: hidden;
+}
+#hero {
+    width: 100%;
+    position: relative;
+    background-color: var(--black);
+}
+.mt-50{
+    margin-top: 50px;
+}
+#timeline {
+    width: 900px;
+    height: 430px;
+    overflow: hidden;
+    margin: 0px auto;
+    position: relative;
+    background: url('../img/dot-gold.gif') left 45px repeat-x;
+}
+h2{
+    color: var(--white);
+    text-align: center;
+}
+svg{
+    fill:var(--white);
+}
+.selected svg{
+    fill:var(--gold);
+}
+#issues li.selected img, #issues li.selected svg{
+    -webkit-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+}
+#issues li img, #issues li svg{
+    margin: 10px 10px 10px 10px;
+    background: transparent;
+    zoom: 1;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-transform: scale(0.7,0.7);
+    transform: scale(0.7,0.7);
+    width: 100px;
+    height: 100px;
+}
+#dates {
+    height: 60px;
+    overflow: hidden;
+}
+li h1 {
+    font-size: 24px;
+    margin: 20px 0;
+    color: var(--white);
+}
+li.selected h1 {
+    color: var(--gold);
+} 
+#dates li {
+    list-style: none;
+    float: left;
+    width: 90px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    background: url('../img/biggerdot.png') center bottom no-repeat;
+}
+#dates a {
+    line-height: 38px;
+    padding-bottom: 10px;
+}
+#dates .selected {
+    font-size: 30px;
+    color: var(--gold);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+#issues {
+    width: 800px;
+    overflow: hidden;
+} 
+#issues li {
+    width: 300px;
+    list-style: none;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+}
+#issues li p {
+    font-size: 20px;
+    margin-right: 40px;
+    font-weight: normal;
+    line-height: 30px;
+    color: var(--white);
+}
+#issues li.selected p {
+    color: var(--gold);
+}
+.navs{
+    width: 90px;
+    height: 40px;
+    float: right;
+}
+#next,
+#prev {
+    width: 40px;
+    height: 40px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+#next {
+    float: right;
+    background-image: url('../img/arrow-right.png');
+}
+#prev {
+    float: left;
+    margin-right: 10px;
+    background-image: url('../img/arrow-left.png');
+}
+#next.disabled,
+#prev.disabled {
+    opacity: 0.2;
+}
+.gartner{
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.selected .gartner{
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.gartner-gold{
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.selected .gartner-gold{
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.lam{
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.selected .lam{
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.lam-gold{
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.selected .lam-gold{
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+@media (min-width: 1400px) {
+    .container{
+        max-width: 1100px;
+    }
+}
+@media (max-width: 991px) {
+    #timeline {
+       width: 600px;
+    }
+}
+@media (max-width: 767px) {
+    #timeline {
+        width: 300px;
+    }
+}
